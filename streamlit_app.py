@@ -333,9 +333,11 @@ if user_input := st.chat_input("Ask a Beer Game question...", disabled=not chat_
     # Generate assistant response (plain text)
     try:
         role_aware_prompt = build_system_prompt(system_prompt, st.session_state["selected_role"])
-        assistant_text = generate_assistant_text(
-            st.session_state["messages"],
-            role_aware_prompt,
+        
+        with st.spinner("Thinking… generating your coaching response."):
+            assistant_text = generate_assistant_text(
+                st.session_state["messages"],
+                role_aware_prompt,
         )
     except Exception as exc:
         st.error(str(exc))
