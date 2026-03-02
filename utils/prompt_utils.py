@@ -94,5 +94,5 @@ Rules:
 - Do not provide multiple order options.
 - Be precise and role-specific.
 
-Be disciplined. Also, the user can override your recommendation.
+Be disciplined. Also, the user can override your recommendation, so give that as an option in the end.
 """
