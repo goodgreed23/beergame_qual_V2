@@ -87,7 +87,7 @@ if "start_time" not in st.session_state:
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "assistant", "content": "Hello, I am your Beer Game coach."}
+        {"role": "assistant", "content": "Hello, I am your Beer Game assistant."}
     ]
 
 if "selected_section" not in st.session_state:
@@ -334,7 +334,7 @@ if user_input := st.chat_input("Ask a Beer Game question...", disabled=not chat_
     try:
         role_aware_prompt = build_system_prompt(system_prompt, st.session_state["selected_role"])
         
-        with st.spinner("Thinking… generating your coaching response."):
+        with st.spinner("Thinking… generating recommendation."):
             assistant_text = generate_assistant_text(
                 st.session_state["messages"],
                 role_aware_prompt,
