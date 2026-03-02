@@ -35,7 +35,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-MODEL_SELECTED = "gpt-5-mini"
+MODEL_SELECTED = "gpt-5-nano"
 FALLBACK_MODEL = "gpt-4o-mini"
 
 st.title("Beer Game Assistant")
